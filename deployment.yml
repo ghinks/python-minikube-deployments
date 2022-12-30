@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp-deployment
+  labels:
+    app: pyapp
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pyapp
+
+  template:
+    metadata:
+      labels:
+        app: pyapp
+
+    spec:
+      containers:
+      - name: python-for-cloud
+        image: ghinks/python-for-cloud:0.0.1
+        ports:
+        - containerPort: 5000
+
