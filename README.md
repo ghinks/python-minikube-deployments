@@ -11,10 +11,11 @@
 - kubectl apply -f service.yml --dry-run=server
 - kubectl apply -f service.yml
 - kubectl get svc
-- k get pod pyapp-deployment-d5d8468fc-4579b -o json | jq ".spec.containers" | jq ".[].name"
+- k get pod <pod-name> -o json | jq ".spec.containers" | jq ".[].name"
 
 - k get ns
 - k describe ns default
+- [istio setup from istio docs](https://istio.io/latest/docs/setup/getting-started/)
 - k label namespace default istio-injection=enabled
 - k describe ns default
 
