@@ -11,3 +11,13 @@
 - kubectl apply -f service.yml --dry-run=server
 - kubectl apply -f service.yml
 - kubectl get svc
+- k get pod pyapp-deployment-d5d8468fc-4579b -o json | jq ".spec.containers" | jq ".[].name"
+
+- k get ns
+- k describe ns default
+- k label namespace default istio-injection=enabled
+- k describe ns default
+
+### local python commands (new linux box)
+- apt install python3.10-venv
+- python3.10 -m venv env
