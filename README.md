@@ -11,7 +11,7 @@
 - kubectl apply -f service.yml --dry-run=server
 - kubectl apply -f service.yml
 - kubectl get svc
-- k get pod "<pod-name>" -o json | jq ".spec.containers" | jq ".[].name"
+- k get pod &lt;pod-name&gt; -o json | jq ".spec.containers" | jq ".[].name"
 
 - k get ns
 - k describe ns default
