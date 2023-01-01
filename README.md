@@ -17,7 +17,7 @@
 - k describe ns default
 - [istio setup from istio docs](https://istio.io/latest/docs/setup/getting-started/)
 - k label namespace default istio-injection=enabled
-- k label namespace default '<label_name>'- to delete
+- k label namespace default &lt;label_name&gt;- to delete
 - k describe ns default
 
 ### local python commands (new linux box)
